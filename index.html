@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geranorte - Generator Maintenance</title>
+  <title>Geranorte - Manutenção de Geradores</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
     }
 
     .sub-logo {
-      font-size: 1rem;
+      font-size: 0.9rem;
       margin-top: 0.3rem;
       font-weight: 400;
     }
@@ -142,6 +142,29 @@
       box-shadow: 0 10px 20px rgba(0, 87, 160, 0.1);
     }
 
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1001;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
     footer {
       background-color: #0057A0;
       color: #fff;
@@ -165,42 +188,46 @@
 <body>
   <header>
     <div class="logo">Geranorte</div>
-    <div class="sub-logo">Generator Maintenance Services</div>
+    <div class="sub-logo">Geranorte Manutenção de Grupos Geradores de Energia Elétrica LTDA</div>
     <nav>
-      <a href="#services">Services</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact</a>
+      <a href="#services">Serviços</a>
+      <a href="#about">Quem Somos</a>
+      <a href="#contact">Contato</a>
     </nav>
   </header>
 
   <section id="services">
-    <h2>Services</h2>
+    <h2>Serviços</h2>
     <div class="services-list">
-      <div class="icon-text"><i class="fas fa-tools"></i> Preventive and corrective maintenance for generator sets</div>
-      <div class="icon-text"><i class="fas fa-bolt"></i> Installation and functional testing</div>
-      <div class="icon-text"><i class="fas fa-exclamation-triangle"></i> Emergency support</div>
-      <div class="icon-text"><i class="fas fa-cogs"></i> Complete overhaul and parts replacement</div>
+      <div class="icon-text"><i class="fas fa-tools"></i> Manutenção preventiva e corretiva de grupos geradores</div>
+      <div class="icon-text"><i class="fas fa-bolt"></i> Instalação e testes funcionais</div>
+      <div class="icon-text"><i class="fas fa-exclamation-triangle"></i> Atendimento emergencial</div>
+      <div class="icon-text"><i class="fas fa-cogs"></i> Reforma completa e substituição de peças</div>
     </div>
   </section>
 
   <section id="about">
-    <h2>About Us</h2>
-    <p>Geranorte is a company specialized in maintenance of electric power generator sets. We operate with commitment, efficiency, and extensive experience in the field. Our mission is to ensure reliable power for businesses, industries, and residences.</p>
+    <h2>Quem Somos</h2>
+    <p>A Geranorte é especializada em manutenção de grupos geradores de energia elétrica. Atuamos com compromisso, eficiência e ampla experiência no setor. Nossa missão é garantir fornecimento de energia confiável para empresas, indústrias e residências.</p>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2>Contato</h2>
     <div class="contact-list">
-      <div class="icon-text"><i class="fas fa-phone"></i> Phone: +55 63 9215-8411</div>
+      <div class="icon-text"><i class="fas fa-phone"></i> Telefone: +55 63 9215-8411</div>
       <div class="icon-text"><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/556392158411" target="_blank">+55 63 9215-8411</a></div>
       <div class="icon-text"><i class="fas fa-envelope"></i> Email: <a href="mailto:servicos@geranortegeradores.com">servicos@geranortegeradores.com</a></div>
-      <div class="icon-text"><i class="fas fa-map-marker-alt"></i> Location: Tocantins, Brazil</div>
+      <div class="icon-text"><i class="fas fa-map-marker-alt"></i> Localização: Tocantins, Brasil</div>
     </div>
   </section>
 
+  <a class="whatsapp-float" href="https://wa.me/556392158411" target="_blank" aria-label="Conversar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
   <footer>
-    <p>Geranorte Generator Maintenance Services</p>
-    <p>&copy; 2025 All rights reserved.</p>
+    <p>Geranorte Manutenção de Geradores</p>
+    <p>&copy; 2025 Todos os direitos reservados.</p>
   </footer>
 
   <script>
@@ -221,5 +248,4 @@
   </script>
 </body>
 </html>
-
 

@@ -3,109 +3,139 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Geranorte - Manutenção de Geradores</title>
+  <title>Geranorte - Manutenção de Grupos Geradores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #003366;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      color: #222;
+      background-color: #fff;
+      line-height: 1.6;
+    }
+
     header {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background-color: #0057A0;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    nav {
-      background-color: #0055aa;
-      text-align: center;
-      padding: 10px;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
+
+    .logo::before, .logo::after {
+      content: '\26A1'; /* ícone de energia estilizado como plug */
+      font-size: 1.2rem;
+    }
+
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin-left: 1rem;
       font-weight: bold;
+      transition: opacity 0.2s;
     }
-    .container {
-      padding: 20px;
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    section {
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    .hero {
+
+    section h2 {
+      font-size: 2rem;
+      color: #0057A0;
+      margin-bottom: 1.5rem;
       text-align: center;
-      padding: 50px 20px;
-      background-color: #e6f0ff;
     }
-    .hero h1 {
-      margin: 0;
-      font-size: 2.5em;
+
+    .icon-text {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
     }
-    .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
+
+    .icon-text i {
+      font-style: normal;
+      margin-right: 1rem;
+      font-size: 1.3rem;
+      color: #0057A0;
     }
+
     footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .contact {
-      background-color: #f0f8ff;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .contact h2 {
+      background-color: #0057A0;
+      color: #fff;
+      padding: 2rem;
       text-align: center;
     }
-    .contact-info {
-      text-align: center;
-      margin-top: 20px;
-    }
-    .contact-info p {
-      margin: 5px 0;
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Geranorte</h1>
-    <p>Manutenção de Grupos Geradores de Energia Elétrica LTDA</p>
+    <div class="logo">Geranorte</div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Início</a>
-    <a href="#servicos">Serviços</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="icon-text"><i>⚡</i>Manutenção preventiva e corretiva em grupos geradores</div>
+    <div class="icon-text"><i>⚡</i>Instalação e testes de funcionamento</div>
+    <div class="icon-text"><i>⚡</i>Atendimento emergencial</div>
+  </section>
 
-  <div class="container">
-    <section class="hero">
-      <h1>Especialistas em Manutenção de Geradores</h1>
-      <p>Garantimos a continuidade da sua energia com serviços técnicos confiáveis e rápidos.</p>
-    </section>
+  <section id="quem-somos">
+    <h2>Quem Somos</h2>
+    <p>A Geranorte é uma empresa especializada em manutenção de grupos geradores de energia elétrica. Atuamos com compromisso, eficiência e experiência no setor.</p>
+  </section>
 
-    <section id="servicos">
-      <h2>Nossos Serviços</h2>
-      <p>Prestamos serviços de manutenção preventiva e corretiva em grupos geradores de energia elétrica, atendendo clientes industriais, comerciais e residenciais em todo o Brasil.</p>
-    </section>
-
-    <section id="contato" class="contact">
-      <h2>Contato</h2>
-      <div class="contact-info">
-        <p><strong>Email:</strong> <a href="mailto:servicos@geranortegeradores.com">servicos@geranortegeradores.com</a></p>
-        <p><strong>Telefone:</strong> <a href="tel:+556392158411">(63) 9215-8411</a></p>
-        <p><strong>WhatsApp:</strong> <a href="https://wa.me/556392158411" target="_blank">Clique aqui para conversar</a></p>
-      </div>
-    </section>
-  </div>
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="icon-text"><i>☎</i>Telefone: (63) 9215-8411</div>
+    <div class="icon-text"><i>📲</i>WhatsApp: +55 63 9215-8411</div>
+    <div class="icon-text"><i>✉</i>Email: <a href="mailto:servicos@geranortegeradores.com">servicos@geranortegeradores.com</a></div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 Geranorte Geradores. Todos os direitos reservados.</p>
-    <p>www.geranortegeradores.com</p>
+    <p>Geranorte Manutenção de Grupos Geradores de Energia Elétrica LTDA</p>
+    <p>&copy; 2025 Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>

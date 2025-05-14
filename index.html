@@ -42,6 +42,13 @@
       gap: 0.5rem;
     }
 
+    .logo::before {
+      content: "\f1e6";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-right: 0.3rem;
+    }
+
     nav a {
       color: white;
       text-decoration: none;
@@ -60,6 +67,14 @@
       padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     section h2 {
@@ -83,8 +98,12 @@
     .icon-text {
       display: flex;
       align-items: center;
-      margin-bottom: 1rem;
       font-size: 1.1rem;
+      transition: transform 0.3s;
+    }
+
+    .icon-text:hover {
+      transform: scale(1.03);
     }
 
     .icon-text i {
@@ -113,6 +132,12 @@
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 87, 160, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .services-list div:hover, .contact-list div:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 87, 160, 0.1);
     }
 
     footer {
@@ -179,6 +204,24 @@
     <p>Geranorte Manutenção de Grupos Geradores de Energia Elétrica LTDA</p>
     <p>&copy; 2025 Todos os direitos reservados.</p>
   </footer>
+
+  <script>
+    // Adiciona a classe "visible" quando a seção aparece na tela
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
 
